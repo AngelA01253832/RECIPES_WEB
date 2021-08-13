@@ -4,6 +4,14 @@ $primarycolor:#FF4418;
     padding: 0;
   }
 
+.principal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+
 .img-food-container{
   color: white;
   width: 100%;
@@ -39,7 +47,7 @@ $primarycolor:#FF4418;
   height: 25px;
 }
 .instructions{
-  margin-top: 50px;
+  padding-top: 350px;
   text-align: center;
 }
 .instructions p{
@@ -49,19 +57,22 @@ $primarycolor:#FF4418;
   margin-top: 50px;
   text-align: center;
 }
-.ingredients{
-  margin-left: 300px;
-  margin-right: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 
+.ingredients{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  justify-content: center;
+}
+.data-ingredient img{
+  padding-top: 5px;
+  width: 100px;
+  height: 100px;
+}
 .item-ingredient{
   background-color: $primarycolor;
-  margin: 25px auto;
-  width: 200px;
-  height: 200px;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 }
 
@@ -76,3 +87,13 @@ $primarycolor:#FF4418;
   margin-right: auto;
   margin-bottom: 50px;
 }
+
+@media (min-width: 400px) and (max-width: 767px){
+  .ingredients{
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    text-align: center;
+  }
+}
+
+
