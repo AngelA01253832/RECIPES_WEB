@@ -3,4 +3,84 @@
   padding: 0;
 }
 
+.img-food-container {
+  color: white;
+  width: 100%;
+  height: 300px;
+  background: url(../img/pasta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 8%;
+}
+
+.img-food-container h2 {
+  padding-top: 200px;
+}
+
+.img-food-container section {
+  margin-left: 50px;
+}
+
+.food-img {
+  width: 500px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.food-img img {
+  margin-top: 30px;
+  width: 500px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10PX;
+}
+
+.gps-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.instructions {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.instructions p {
+  text-align: justify;
+}
+
+.ingredients-content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.ingredients {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item-ingredient {
+  background-color: #FF4418;
+  margin: 25px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.tutorial-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.video-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
 /*# sourceMappingURL=main.css.map */
