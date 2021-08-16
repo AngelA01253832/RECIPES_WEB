@@ -60,9 +60,25 @@ h1{
   background-color: white;
   box-shadow: 0 5px 10px rgba(0,0,0,0.5);
   border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.categorie-item{
+  width: 128px;
+  height: 150px;
+  display: block;
+  padding-top: 35px;
+  text-align: center;
+}
+.categorie-item:hover{
+  background-color: $primarycolor;
+  border-radius: 25px;
+}
+.categorie-item img{
+  width: 50px;
+  height: 50px;
+  margin: auto;
 }
 .random{
   margin-left: 200px;
@@ -122,12 +138,15 @@ main h2{
 
 .grid-food{
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20rem);
+  grid-template-columns: repeat(auto-fit, 25rem);
   justify-content: center;
 }
 .food-container{
   width: 250px;
   height: 200px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.5);
   background-color: $primarycolor;
