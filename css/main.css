@@ -60,6 +60,12 @@ h1 {
   justify-content: space-around;
 }
 
+.food-data-random {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .categories-randomrecipe {
   margin-top: 2rem;
   display: flex;
@@ -181,6 +187,9 @@ main h2 {
 }
 
 .food-container {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
   width: 15rem;
   height: 15rem;
   margin-top: 50px;
@@ -192,7 +201,7 @@ main h2 {
   color: white;
   background: linear-gradient(to top right, rgba(0, 0, 0, 0.842), rgba(196, 194, 194, 0.5)), url(../img/beef.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: 0 100%;
   transition: border-color 1s, box-shadow 0.5s;
 }
@@ -248,6 +257,7 @@ main h2 {
   }
 
   .randomandcategorie {
+    
     flex-direction: row;
   }
 }
@@ -331,6 +341,7 @@ main h2 {
   margin-top: 15px;
   width: 20px;
   height: 25px;
+  color: #fff;
 }
 
 .img-food-container {
@@ -340,6 +351,7 @@ main h2 {
   background: linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(255, 254, 254, 0.5)), url(../img/pasta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  /* object-fit: cover; */
   background-position: 0 8%;
 }
 
@@ -408,7 +420,7 @@ main h2 {
 }
 
 .item-ingredient {
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.842), rgba(196, 194, 194, 0.5)), url(../img/beef.jpg);
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.842), rgba(196, 194, 194, 0.5)), url(../img/no-image.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 100%;

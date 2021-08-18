@@ -5,88 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <title>Recetario de Beto</title>
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="init">
         <h1>Welcome to Beto's recipe book!</h1>
 
             <section class="searching">
-                <input type="text" placeholder="Search">
-                <button type="submit"><img src="./img/search.svg" alt=""></button>
+                <input id="Byname" type="text" placeholder="Search">
+                <button type="submit" onclick="window.searchMeal()"><img src="./img/search.svg" alt=""></button>
             </section>
     </div>
         <h2 class="h2-categories">Categories</h2>
         <section class="randomandcategorie">
             <div class="random">
                 <h2>Recipe day</h2>
-                <div class="random-container">
-                    <section class="food-data-random">
-                        <p class="p-card">Name: <br>
-                            Region: </p>
-                    </section>
+                <div id="randommeal">
+                    
                 </div>
                 <div class="random-button">
-                    <button class="btn">Other!</button>
+                    <button onclick="window.getMealRandom()" class="btn">Other!</button>
                 </div>
             </div>
         <section class="categories-randomrecipe">
             <div class="categories">
                 <div class="categorie-item">
-                    <a href=""><img src="./img/beef.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Beef')"><img src="./img/beef.svg" alt=""></a> 
                     <p>Beef</p> 
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/breakfast.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Breakfast')"><img src="./img/breakfast.svg" alt=""></a> 
                     <p>Breakfast</p> 
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/chicken.svg" alt=""></a>
+                    <a onclick="window.getMealsByCategory('Chicken')"><img src="./img/chicken.svg" alt=""></a>
                     <p>Chicken</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/Dessert.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Dessert')"><img src="./img/Dessert.svg" alt=""></a> 
                     <p>Dessert</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/fish.svg" alt=""></a>  
+                    <a onclick="window.getMealsByCategory('Seafood')"><img src="./img/fish.svg" alt=""></a>  
                     <p>Seafood</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/goat.svg" alt=""></a>
+                    <a onclick="window.getMealsByCategory('Goat')"><img src="./img/goat.svg" alt=""></a>
                     <p>Goat</p>      
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/lamb.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Lamb')"><img src="./img/lamb.svg" alt=""></a> 
                     <p>Lamb</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/mis.svg" alt=""></a>
+                    <a><img src="./img/mis.svg" alt=""></a>
                     <p>Mix</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/pasta.svg" alt=""></a>
+                    <a onclick="window.getMealsByCategory('Pasta')"><img src="./img/pasta.svg" alt=""></a>
                     <p>Pasta</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/pork.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Pork')"><img src="./img/pork.svg" alt=""></a> 
                     <p>Pork</p>   
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/side.svg" alt=""></a>
+                    <a onclick="window.getMealsByCategory('Side')"><img src="./img/side.svg" alt=""></a>
                     <p>Side</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/starter.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Starter')"><img src="./img/starter.svg" alt=""></a> 
                     <p>Starter</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/vegan.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Breakfast')"><img src="./img/vegan.svg" alt=""></a> 
                     <p>Vegan</p>    
                 </div>
                 <div class="categorie-item">
-                    <a href=""><img src="./img/vegetarian.svg" alt=""></a> 
+                    <a onclick="window.getMealsByCategory('Vegetarian')"><img src="./img/vegetarian.svg" alt=""></a> 
                     <p>Veggie</p>   
                 </div>
             </div>
@@ -94,58 +93,10 @@
     </section>
     <main>
         <h2>Food</h2>
-    <section class="grid-food">
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
-        <div class="food-container">
-            <section class="food-data">
-                <p class="p-card">Name: <br>
-                    Region: </p>
-            </section>
-        </div>
+    <section id="meals" class="grid-food">
         
     </section>
     <a href="./Recipes.html">Recetas</a>
-    </main>        
+    </main> 
 </body>
 </html>
