@@ -53,15 +53,22 @@ h1 {
   border-bottom-right-radius: 25px;
 }
 
-.categories-randomrecipe {
-  margin-top: 100px;
-  margin-left: 200px;
+.randomandcategorie {
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.categories-randomrecipe {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .categories {
-  width: 900px;
-  height: 300px;
+  width: 38rem;
+  height: 14rem;
   background-color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
@@ -70,8 +77,8 @@ h1 {
 }
 
 .categorie-item {
-  width: 128px;
-  height: 150px;
+  width: 4rem;
+  height: 7rem;
   display: block;
   padding-top: 35px;
   text-align: center;
@@ -89,13 +96,12 @@ h1 {
 }
 
 .random {
-  margin-left: 200px;
+  margin-top: 2.3rem;
   width: 300px;
-  height: 300px;
+  height: 19rem;
   border-radius: 25px;
   background-color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  display: inline-block;
 }
 
 .random > h2 {
@@ -120,12 +126,28 @@ h1 {
   color: black;
 }
 
+.food-data-random {
+  height: 3rem;
+  width: 300px;
+  margin-top: 152px;
+  color: black;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-weight: bold;
+}
+
+.p-card {
+  margin-left: 20px;
+}
+
 .btn:hover {
   color: #FF4418;
   background-color: white;
 }
 
 .random-container {
+  display: flex;
   width: 250px;
   height: 200px;
   margin-left: auto;
@@ -138,6 +160,11 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 100%;
+}
+
+.h2-categories {
+  padding-left: 50px;
+  margin-top: 50px;
 }
 
 main {
@@ -150,13 +177,12 @@ main h2 {
 
 .grid-food {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 25rem);
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .food-container {
-  width: 250px;
-  height: 200px;
+  width: 15rem;
+  height: 15rem;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -168,19 +194,129 @@ main h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 100%;
+  transition: border-color 1s, box-shadow 0.5s;
 }
 
 .food-container:hover {
   transform: translateY(-15px);
+  border-color: #0d6efd;
+  box-shadow: 0px 0px 10px 2px #0d6efd;
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .food-data {
-  margin-left: 25px;
-  padding-top: 125px;
+  text-align: left;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 15rem;
+  height: 3.5rem;
+  margin-top: 185px;
 }
 
+/*Responsive INDEX*/
+@media (min-width: 414px) and (max-width: 514px) {
+  h1 {
+    text-align: center;
+  }
+
+  .searching {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .random {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .categories-randomrecipe {
+    display: none;
+  }
+
+  .grid-food {
+    grid-template-columns: 1fr;
+  }
+
+  .h2-categories {
+    display: none;
+  }
+
+  .randomandcategorie {
+    flex-direction: row;
+  }
+}
+@media (min-width: 515px) and (max-width: 767px) {
+  h1 {
+    text-align: center;
+  }
+
+  .searching {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .random {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .categories-randomrecipe {
+    display: none;
+  }
+
+  .grid-food {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .h2-categories {
+    display: none;
+  }
+
+  .randomandcategorie {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    text-align: center;
+  }
+
+  .searching {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .random {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .categories-randomrecipe {
+    display: none;
+  }
+
+  .grid-food {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .h2-categories {
+    display: none;
+  }
+
+  .randomandcategorie {
+    flex-direction: row;
+  }
+}
 /*RECIPE HTML*/
 .principal-container {
   position: fixed;
@@ -208,7 +344,7 @@ main h2 {
 }
 
 .img-food-container h2 {
-  padding-top: 140px;
+  padding-top: 180px;
 }
 
 .img-food-container section {
@@ -243,17 +379,26 @@ main h2 {
 
 .instructions p {
   text-align: justify;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .ingredients-content {
   margin-top: 50px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.ingredient-title {
+  text-align: center;
 }
 
 .ingredients {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20rem);
+  grid-template-columns: repeat(3, 20rem);
   justify-content: center;
+  text-align: center;
 }
 
 .data-ingredient img {
@@ -268,16 +413,15 @@ main h2 {
   background-size: cover;
   background-position: 0 100%;
   color: white;
-  margin: 20px auto;
+  margin: 25px auto;
   width: 150px;
   height: 150px;
   border-radius: 10px;
 }
 
-.item-ingredient:hover {
-  transform: translateY(-15px);
-  transition: all 0.3s ease-in;
-  cursor: pointer;
+.wrapper-grid {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .data-ingredient {
@@ -297,11 +441,49 @@ main h2 {
   margin-bottom: 50px;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 414px) and (max-width: 514px) {
   .ingredients {
-    display: grid;
+    grid-template-columns: repeat(2, 15rem);
+  }
+
+  .instructions p {
+    text-align: justify;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .img-food-container h2 {
+    padding-top: 180px;
+  }
+}
+@media (min-width: 515px) and (max-width: 767px) {
+  .ingredients {
     grid-template-columns: repeat(2, 20rem);
-    text-align: center;
+  }
+
+  .instructions p {
+    text-align: justify;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .img-food-container h2 {
+    padding-top: 180px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ingredients {
+    grid-template-columns: repeat(3, 20rem);
+  }
+
+  .instructions p {
+    text-align: justify;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .img-food-container h2 {
+    padding-top: 180px;
   }
 }
 
