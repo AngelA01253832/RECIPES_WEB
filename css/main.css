@@ -76,6 +76,22 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+.categorie-carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.categorie-carousel-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-item-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .categorie-item {
   width: 4rem;
   height: 7rem;
@@ -217,6 +233,10 @@ main h2 {
   margin-top: 185px;
 }
 
+#carouselExampleDark {
+  display: none;
+}
+
 /*Responsive INDEX*/
 @media (min-width: 414px) and (max-width: 514px) {
   h1 {
@@ -249,6 +269,10 @@ main h2 {
 
   .randomandcategorie {
     flex-direction: row;
+  }
+
+  #carouselExampleDark {
+    display: block;
   }
 }
 @media (min-width: 515px) and (max-width: 767px) {
@@ -283,6 +307,10 @@ main h2 {
   .randomandcategorie {
     flex-direction: row;
   }
+
+  #carouselExampleDark {
+    display: block;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
@@ -315,6 +343,10 @@ main h2 {
 
   .randomandcategorie {
     flex-direction: row;
+  }
+
+  #carouselExampleDark {
+    display: block;
   }
 }
 /*RECIPE HTML*/
@@ -386,8 +418,6 @@ main h2 {
 .ingredients-content {
   margin-top: 50px;
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
 .ingredient-title {
@@ -396,9 +426,7 @@ main h2 {
 
 .ingredients {
   display: grid;
-  grid-template-columns: repeat(3, 20rem);
-  justify-content: center;
-  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .data-ingredient img {
@@ -414,8 +442,8 @@ main h2 {
   background-position: 0 100%;
   color: white;
   margin: 25px auto;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 10px;
 }
 
@@ -443,7 +471,12 @@ main h2 {
 
 @media (min-width: 414px) and (max-width: 514px) {
   .ingredients {
-    grid-template-columns: repeat(2, 15rem);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item-ingredient {
+    width: 150px;
+    height: 150px;
   }
 
   .instructions p {
@@ -458,13 +491,18 @@ main h2 {
 }
 @media (min-width: 515px) and (max-width: 767px) {
   .ingredients {
-    grid-template-columns: repeat(2, 20rem);
+    grid-template-columns: 1fr 1fr;
   }
 
   .instructions p {
     text-align: justify;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .item-ingredient {
+    width: 150px;
+    height: 150px;
   }
 
   .img-food-container h2 {
@@ -473,13 +511,18 @@ main h2 {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .ingredients {
-    grid-template-columns: repeat(3, 20rem);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .instructions p {
     text-align: justify;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .item-ingredient {
+    width: 180px;
+    height: 180px;
   }
 
   .img-food-container h2 {
