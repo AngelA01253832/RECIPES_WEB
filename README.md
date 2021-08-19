@@ -15,10 +15,10 @@ https://www.figma.com/community/file/1006795255481364886/beduProyect-Equipo14
 
 Mobile design:
 
-![unknown](https://user-images.githubusercontent.com/83803391/128814674-dedbf053-3b07-4d93-9178-bb94abe5ee26.png)
-![unknown (1)](https://user-images.githubusercontent.com/83803391/128814676-ad997594-6caf-4669-b162-a1dd57f69405.png)
+![image](https://user-images.githubusercontent.com/52447471/130012649-cada7679-cd6e-4e1d-b944-4f46c469a82a.png)
+
 
 Web design:
 
-![unknown (1)](https://user-images.githubusercontent.com/83803391/128812367-d911ed34-6462-4f69-b646-bdd24e489bcd.png)
-![unknown (2)](https://user-images.githubusercontent.com/83803391/128812368-fa45b2fd-9daa-4e83-9d69-f711ae72abf2.png)
+![image](https://user-images.githubusercontent.com/52447471/130012368-7513d3dd-e9ff-4432-bb4e-dfff1780ee55.png)
+
