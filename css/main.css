@@ -161,6 +161,9 @@ h1 {
 }
 
 .random-container {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
   display: flex;
   width: 250px;
   height: 200px;
@@ -193,6 +196,9 @@ main h2 {
 }
 
 .food-container {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
   width: 20rem;
   height: 15rem;
   margin-top: 50px;
@@ -385,6 +391,7 @@ main h2 {
 }
 
 .return-icon {
+  color: #fff;
   margin-left: 25px;
   margin-top: 15px;
   width: 20px;
@@ -460,7 +467,7 @@ main h2 {
 }
 
 .item-ingredient {
-  background: url(../img/img-not.png);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(../img/img-not.png) no-repeat; background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 100%;

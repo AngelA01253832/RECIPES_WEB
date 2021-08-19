@@ -1,8 +1,4 @@
 import '../css/main.css';
-// import '../img/recipes.jpg';
-// import recipes from '../img/recipes.jpg';
-
-// document.getElementById('ejemplo').src = recipes;
 
 const API = {
     categories: 'https://www.themealdb.com/api/json/v1/1/categories.php',
@@ -13,11 +9,21 @@ const API = {
     searchByName: 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 };
 
-const mealsSec = document.getElementById('meals')
-const randomMeal = document.getElementById('randommeal')
+const mealsSec = document.getElementById('meals');
+const randomMeal = document.getElementById('randommeal');
+const searchInput = document.getElementById('Byname');
+
+
+searchInput.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        window.searchMeal();
+    }
+});
 
 window.addEventListener('DOMContentLoaded', function () {
     mealsSec.innerHTML = '';
+    randomMeal.innerHTML = '';
 
     fetch(`${API.byCategory}Beef`)
         .then(res => res.json())
@@ -41,7 +47,8 @@ window.addEventListener('DOMContentLoaded', function () {
         .then(data => data.meals[0])
         .then(meal => {
             randomMeal.innerHTML += `
-        <div class="random-container" style=" url(${meal.strMealThumb}); no-repeat; background-size: cover;">
+        <div class="random-container" onclick="window.test(${meal.idMeal})" 
+            style="background: url(${meal.strMealThumb});no-repeat; background-size: cover;">
             <section class="food-data-random">
                 <p class="p-card">Name: ${meal.strMeal} <br>
                     Region: ${meal.idMeal} </p>
@@ -83,7 +90,8 @@ window.getMealRandom = function () {
         .then(data => data.meals[0])
         .then(meal => {
             randomMeal.innerHTML += `
-            <div class="random-container" style="background: url(${meal.strMealThumb}); no-repeat; background-size: cover;">
+            <div class="random-container" onclick="window.test(${meal.idMeal})" 
+                style="background: url(${meal.strMealThumb});no-repeat; background-size: cover;">
                 <section class="food-data-random">
                     <p class="p-card">Name: ${meal.strMeal} <br>
                         Region: ${meal.idMeal} </p>
@@ -100,7 +108,6 @@ window.searchMeal = function() {
     let str = document.getElementById('Byname').value;
 
 
-
     fetch(`${API.searchByName}${str}`)
         .then(res => res.json())
         .then(data => data.meals)
@@ -108,7 +115,7 @@ window.searchMeal = function() {
             meals.forEach(meal => {
                 mealsSec.innerHTML += `
                     <div class="food-container" onclick="window.test(${meal.idMeal})" 
-                        style="background: url(${meal.strMealThumb}); no-repeat; background-size: 0 100%;">
+                    style="background: url(${meal.strMealThumb});no-repeat; background-size: cover;">
                         <section class="food-data">
                             <p class="p-card">Name:${meal.strMeal} <br>
                                 Region: ${meal.idMeal} </p>

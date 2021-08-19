@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const instructionsSec = document.getElementById('instructions');
     const tutorialSec = document.getElementById('tutorial');
     const ingredientsSec = document.getElementById('ingredients');
+    const recommendationsSec = document.getElementById('Reco-grid')
 
     const cleanMeal = {
         ingredients: [],
@@ -66,7 +67,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 <div class="item-ingredient" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0)), url(https://www.themealdb.com/images/ingredients/${i}-Small.png) no-repeat; background-size: cover;">
                     <div class="data-ingredient">
                         Name:${i} <br>
-                        Quantity: ${measurements[index]}: 
+                        Quantity: ${measurements[index]} 
                     </div>
                 </div>
                 `
@@ -84,4 +85,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
             console.log(measurements[0])
         })
+    
+    for(var i = 0; i < 3; i++){
+        fetch(API.randomMeal)
+        .then(res => res.json())
+        .then(data => data.meals[0])
+        .then(meal => {
+            recommendationsSec.innerHTML += `
+            <div class="food-container" onclick="window.test(${meal.idMeal})"
+            style="background: url(${meal.strMealThumb});no-repeat; background-size: cover;"
+            >
+                <section class="food-data">
+                    <p class="p-card">Name: ${meal.strMeal} <br>
+                        Region: </p>
+                </section>
+            </div>
+        `
+        })
+    }
 });
+
+window.test = function (id) {
+    window.location.href = "./Recipes.html?mealID=" + encodeURIComponent(id);
+}
