@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
             coverSec.innerHTML = `
-            <section  class="img-food-container" style="background: linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(196, 194, 194, 0.5)), url(${meal.strMealThumb}) no-repeat; background-size: cover; background-position: 0 8%;">
+            <section  class="img-food-container" style="background: linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(196, 194, 194, 0.5)), url(${meal.strMealThumb}) no-repeat; background-size: cover; background-position:0 50%;">
                 <a href="./index.html"><i class="fa fa-chevron-left return-icon"></i></a>
                 <section>
                     <h2 id="title">${meal.strMeal}</h2>

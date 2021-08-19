@@ -90,10 +90,11 @@ h1{
   display: block;
   padding-top: 35px;
   text-align: center;
+  
 }
 .categorie-item:hover{
   background-color: $primarycolor;
-  
+  cursor: pointer;
   border-radius: 25px;
 }
 .categorie-item img{
@@ -128,8 +129,8 @@ h1{
 }
 .food-data-random{
   height: 3rem;
-  width:300px;
-  margin-top: 152px;
+  width:100%;
+  margin-top: 195px;
   color: black;
   background-color: white;
   border-bottom-left-radius: 15px;
@@ -146,8 +147,8 @@ h1{
 
 .random-container{
   display: flex;
-  width: 250px;
-  height: 200px;
+  width: 20rem;
+  height: 15rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
@@ -156,6 +157,9 @@ h1{
   color: white;
   background: url(../img/img-not.png) no-repeat;
   background-size: 100% 100%;
+}
+.random-container:hover{
+  cursor: pointer;
 }
 .h2-categories{
   padding-left: 50px;
@@ -294,6 +298,7 @@ main h2{
     width: 15rem;
   height: 15rem;
   }
+  
 }
 @media (min-width: 768px)and (max-width: 1300px){
   h1{
@@ -339,10 +344,11 @@ main h2{
 
 /*RECIPE HTML*/
 .principal-container{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-top: 40px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
   box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 
 }
@@ -357,8 +363,12 @@ main h2{
   color: white;
   width: 100%;
   height: 300px;
-  background: linear-gradient(to top right,rgba(0,0,0,0.5),rgba(255, 254, 254, 0.5)),url(../img/img-not.png) no-repeat;
-  background-size: 100% 100%;
+  background: url(../img/img-not.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 100%;
+  /*background: linear-gradient(to top right,rgba(0,0,0,0.5),rgba(255, 254, 254, 0.5)),url(../img/img-not.png) no-repeat;*/
+  
 }
 .img-food-container h2 {
   padding-top: 180px;
@@ -388,13 +398,13 @@ main h2{
   height: 25px;
 }
 .instructions{
-  padding-top: 350px;
+  padding-top: 50px;
   text-align: center;
 }
 .instructions p{
   text-align: justify;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 .ingredients-content{
   margin-top: 50px;
@@ -442,11 +452,11 @@ main h2{
   
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
 }
 #Reco-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 100px;
 }
 #Reco-random h2{
   margin-left: 3rem;
